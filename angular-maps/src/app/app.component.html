@@ -3,12 +3,18 @@
 <google-map [center]="center">  
   <!--Mettiamo un marker alle nostre coordinate-->
   <map-marker *ngFor="let position of position"
-  [position]="position" [label]="label" [title]="title">
+  [position]="position" [label]="label" [title]="title"  [options] = "markerOptions">
   </map-marker>
 
-  <map-circle [center]="position"
+  <map-circle *ngFor="let position of position"
+  [center]="position"
   [radius]="50"
   [options] = 'circleOptions'>
 </map-circle>
 
+
 </google-map>
+<button (click)="Giallo()">Giallo</button>
+<button (click)="Rosso()">Rosso</button>
+<button (click)="Blu()">Blu</button>
+
