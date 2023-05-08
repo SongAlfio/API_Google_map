@@ -11,10 +11,22 @@
   [radius]="50"
   [options] = 'circleOptions'>
 </map-circle>
+<map-polygon [paths]="vertices" [options] = 'polygonOptions'>
+</map-polygon>
+<map-polygon [paths]="vertices1" [options] = 'polygonOptions'>
+</map-polygon>
 
 
 </google-map>
+<div>
+  Cambiare Colore Cerchio 
 <button (click)="Giallo()">Giallo</button>
 <button (click)="Rosso()">Rosso</button>
 <button (click)="Blu()">Blu</button>
-
+</div>
+<div>
+  Cambiare Colore Rettangolo 
+<button (click)="Giallo1()">Giallo</button>
+<button (click)="Rosso1()">Rosso</button>
+<button (click)="Blu1()">Blu</button>
+</div>
